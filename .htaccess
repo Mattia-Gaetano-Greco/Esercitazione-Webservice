@@ -1,0 +1,27 @@
+# Abilita l'apache rewrite engine
+RewriteEngine on
+
+# Redireziona tutte le richieste a index.php
+RewriteRule ^(.*)$ index.php [QSA]
+
+#Changing: RewriteRule ^ /%1 [NC,L,R]
+
+#to
+
+#RewriteRule ^ %1 [NC,L,R]
+
+#and then back to
+
+#RewriteRule ^ /%1 [NC,L,R]
+
+#And similarly RewriteRule ^(.*?)/?$ /$1.php [NC,L]
+
+#to
+
+#RewriteRule ^(.*?)/?$ $1.php [NC,L]
+
+#and then back to
+
+#RewriteRule ^(.*?)/?$ /$1.php [NC,L]
+
+#Appeared to sort it out!
